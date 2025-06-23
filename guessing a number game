@@ -1,0 +1,47 @@
+import random
+import time
+from pickletools import string1
+
+n1=input ("enter the player1 name: ")
+n2= input ("enter the player 2 name: ")
+nums=[]
+while (len (nums)<5):
+    d = random.randint(1, 10)
+    if (d in nums):
+        continue
+    else:
+        nums.append(d)
+print ("___________________________")
+print (" computer has five integer 1 t 10 in mind ")
+print (" you have 3 turns to guss it ....... ready for play>>>>")
+print ("___________________________")
+
+s1=0
+s2=0
+
+for i in range (3):
+    print (" >>>>>TRUN{} ". format(i+1))
+    a= int (input("Trun{} predict : ". format(i+1)))
+
+    if (a in nums):
+        print(" correct")
+        s1=s1+1
+    else:
+        print("wrong")
+
+    b = int(input("Trun{} predict : ".format(i+1)))
+    if (b in nums):
+        print(" correct")
+        s2 = s2+1
+    else:
+        print("wrong")
+print ("_________________________")
+print (" the winner is ")
+print (" the computer fixed numbers : ",nums)
+print("__________________________")
+if (s1>s2):
+    print (" player 1 is winner".format(n1))
+elif(s1<s2):
+        print(" player 2 is winner")
+else:
+    print (" draw")
