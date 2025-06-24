@@ -1,0 +1,10 @@
+a=int(input("enter the amount: "))
+coins=[500,200,100,50,20,10,5,2,1]
+ac={}
+for i in coins:
+    if a >=i:
+        count = a//i
+        ac[i]= count
+        a-=count*i
+print(ac)
+    
