@@ -1,0 +1,37 @@
+def circle():
+    o=int(input("enter the radius of circle"))
+    print("circle area is:", 3.14 *o*o)
+def sq(p):
+    print("the area of the square:",p*p)
+def rect():
+    l = int (input("enter the lenght of the rectangle: "))
+    v = int(input("enter the base of the rectangle: "))
+    return l*v
+def tri(t,r):
+    return 0.5*t*r
+
+
+while True:
+    print("1.circle")
+    print("2.square")
+    print("3.rectangle")
+    print("4.triangle")
+
+    a=int(input("enter your case: "))
+    match a :
+        case 1: #without return and without argument
+            circle() 
+        case 2 : #with argument and without return
+            p=int(input("enter the area of square: "))
+            sq(p)
+        case 3 : # with return and without argument
+            res= rect()
+            print("the area of rectangle is: ", res)
+        case 4: # with return and with argument
+            t=int(input("enter the hight of the triangle: "))
+            r=int(input("enter the base of the triangle: "))
+            res = tri(t,r)
+            print("the are of triangle is : ",res)
+        case _:
+            break
+
