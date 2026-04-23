@@ -1,0 +1,40 @@
+class Solution(object):
+    def distance(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+
+        n = len(nums)
+        res = [0] * n
+        # Map each value to a list of its indices
+        indices_map = defaultdict(list)
+        for i, val in enumerate(nums):
+            indices_map[val].append(i)
+        
+        # Calculate sum of distances for each unique value group
+        for val in indices_map:
+            indices = indices_map[val]
+            k = len(indices)
+            
+            # Total sum of all indices for this value
+            total_sum = sum(indices)
+            # Keep track of the sum of indices seen so far (prefix sum)
+            prefix_sum = 0
+            
+            for m, idx in enumerate(indices):
+                # m is the count of elements to the left
+                # (k - m - 1) is the count of elements to the right
+                
+                left_contribution = (m * idx) - prefix_sum
+                
+                # Suffix sum = total_sum - prefix_sum - current_idx
+                suffix_sum = total_sum - prefix_sum - idx
+                right_contribution = suffix_sum - ((k - m - 1) * idx)
+                
+                res[idx] = left_contribution + right_contribution
+                
+                # Update prefix sum for the next index in the list
+                prefix_sum += idx
+                
+        return res    
