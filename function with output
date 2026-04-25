@@ -1,0 +1,8 @@
+def my_function_1(text):
+    return text+text
+
+def my_function_2(text):
+    return text.title()
+
+output=my_function_2(my_function_1("hello"))
+print(output)
