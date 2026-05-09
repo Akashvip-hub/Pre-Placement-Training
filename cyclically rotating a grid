@@ -30,6 +30,5 @@ class Solution(object):
                 idx += 1
             for i in range(m - 1 - layer, layer, -1):
                 grid[i][layer] = rotated[idx]
-                idx += 1
-                
+                idx += 1   
         return grid
