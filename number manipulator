@@ -1,3 +1,4 @@
+# only for calculations numbers.....
 bmi = 84 / 1.65 ** 2
 fun = round(bmi ,2) # or we can use f"{bmi:.2f}"
 print(fun)
