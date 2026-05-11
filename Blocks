@@ -1,3 +1,4 @@
+#in clg 
 b=int (input("enter no of block:"))
 l=int (input("enter no of line:"))
 s=int (input("enter no of star:"))
