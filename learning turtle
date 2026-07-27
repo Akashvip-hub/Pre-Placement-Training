@@ -1,0 +1,18 @@
+from turtle import Turtle
+import random
+
+tim = Turtle()
+tim.shape("turtle")
+tim.pencolor("blue")
+tim.speed(4)
+colours=["blue","red","green","yellow","orange","pink"]
+
+def class_to_get(sums):
+    angle = 360/sums
+    for _ in range(sums):
+        tim.forward(100)
+        tim.right(angle)
+
+for to_get_shape in range(3,11):
+    tim.color(random.choice(colours))
+    class_to_get(to_get_shape)
