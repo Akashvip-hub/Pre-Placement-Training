@@ -1,0 +1,17 @@
+from turtle import Turtle
+import random
+
+from main import colours
+
+tim = Turtle()
+tim.shape("turtle")
+tim.pencolor("blue")
+tim.speed(20)
+tim.color(colours)
+dis =[0, 90, 180, 270]
+tim.pensize(15)
+
+for _ in range(100):
+    tim.color(random.choice(colours))
+    tim.forward(50)
+    tim.setheading(random.choice(dis))
