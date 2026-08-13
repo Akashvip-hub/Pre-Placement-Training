@@ -1,8 +1,6 @@
 import random
 from turtle import Turtle
 
-
-
 tim = Turtle()
 tim.shape("turtle")
 tim.pencolor("blue")
@@ -25,5 +23,4 @@ def draw_spirograph (size):
 
 
 draw_spirograph(5)
-
 tim.screen.exitonclick()
